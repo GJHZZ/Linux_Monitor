@@ -1,0 +1,23 @@
+HELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
+
+#*/5 * * * * root /home/blackbox/public/checkalg.sh > /dev/null 2>&1
+#*/5 * * * * root /home/blackbox/public/checkarp.sh > /dev/null 2>&1
+#*/5 * * * * root /home/blackbox/public/checkmbuf.sh > /dev/null 2>&1
+#*:1 * * * * root  /home/blackbox/public/checkcore.sh > /dev/null 2>&1
+*/5 * * * * root /home/blackbox/public/check_df.sh > /dev/null 2>&1
+*/5 * * * * root /home/blackbox/public/check_free.sh > /dev/null 2>&1
+#*:30 * * * * root /home/blackbox/public/checkdrop.sh > /dev/null 2>&1
+* * * * * root /home/blackbox/public/check_time.sh > /dev/null 2>&1
+#*/5 * * * * root /home/blackbox/public/checkfdb.sh > /dev/null 2>&1
+*:1 * * * * root /home/blackbox/public/check_lsof.sh > /dev/null 2>&1
+*:1 * * * * root /home/blackbox/public/check_mem.sh > /dev/null 2>&1
+#*:1 * * * * root /home/blackbox/public/checkio.sh > /dev/null 2>&1
+*:1 * * * * root /home/blackbox/public/check_cpu.sh > /dev/null 2>&1
+* * * * * root /home/blackbox/public/check_ps.sh > /dev/null 2>&1
+#*/5 * * * * root /home/blackbox/public/checksession.sh > /dev/null 2>&1
+0 0 1 * * root /home/blackbox/public/deldata.sh > /dev/null 2>&1
+#0 */12 * * * root /home/blackbox/public/check.sh > /dev/null 2>&1
+0 8 * * * root /home/blackbox/public/monitor.sh > /dev/null 2>&1
